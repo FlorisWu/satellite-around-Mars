@@ -36,8 +36,8 @@ t=sp.linspace(0.,1000000.,times) #time
 xx0=[-5*R, 0, -2*R, 500] #starting position and velocity
 
 MARS=sp.arange(0,360,0.01) #drawing Mars
-soln=spi.odeint(f1,xx0,t)
-dist=(soln[:,0]**2+soln[:,2]**2)**0.5
+soln=spi.odeint(f1,xx0,t) #solution of first order ordinary equation
+dist=(soln[:,0]**2+soln[:,2]**2)**0.5 #final position
 
 for p in range(times):
     if dist[p] < R:
