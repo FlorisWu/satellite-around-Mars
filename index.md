@@ -18,7 +18,7 @@ times=100000
 pi=3.141592654 #pi
 ```
 
-## Plotting trajectory when inital velocity is 500 m/s
+## Plotting trajectory when initial velocity is 500 m/s
 When initial velocity of satellite is 500 m/s, it prints "Satellite crashes."
 
 ```python
@@ -63,3 +63,22 @@ pl.yticks(fontsize=16)
 ```
 
 <img src="https://github.com/FlorisWu/satellite-around-Mars/blob/master/trajectory_500.jpg?raw=true" width="900"/>
+
+## Plotting energy when initial velocity is 500 m/s
+
+```python
+PE=-G*MM*MS/(xx**2+xy**2)**0.5 #potential energy
+KE=0.5*MS*(vx**2+vy**2) #kinetic energy
+
+fig=pl.figure(figsize=(20,10))
+pl.plot(t,PE,'r-') #potential energy in red
+pl.plot(t,KE,'b-') #kinetic energy in blue
+pl.plot(t,PE+KE,'g-') #total energy in green
+pl.xlabel("t(s)")
+pl.ylabel("energy(J)")
+pl.legend(["potential energy-red", "kinetic energy-blue", "total energy-green"])
+pl.show()
+```
+
+<img src="https://github.com/FlorisWu/satellite-around-Mars/blob/master/energy_500.jpg?raw=true" width="900"/>
+
