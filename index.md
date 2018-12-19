@@ -18,7 +18,7 @@ times=100000
 pi=3.141592654 #pi
 ```
 
-## Plotting trajectory when satellite crashes with Mars
+## Trajectory when satellite crashes with Mars
 When initial velocity of satellite is 500 m/s, it prints "Satellite crashes."
 
 ```python
@@ -64,7 +64,7 @@ pl.yticks(fontsize=16)
 
 <img src="https://github.com/FlorisWu/satellite-around-Mars/blob/master/trajectory_500.jpg?raw=true" width="900"/>
 
-## Plotting energy when satellite crashes with Mars
+## Energies when satellite crashes with Mars
 
 ```python
 PE=-G*MM*MS/(xx**2+xy**2)**0.5 #potential energy
@@ -82,3 +82,10 @@ pl.show()
 
 <img src="https://github.com/FlorisWu/satellite-around-Mars/blob/master/energy_500.jpg?raw=true" width="900"/>
 
+## Trajectory when satellite travels in an ellipse (initial velocity is 2000 m/s)
+
+<img src="https://github.com/FlorisWu/satellite-around-Mars/blob/master/trajectory_2000.jpg?raw=true" width="900"/>
+
+## Energies when satellite travels in an ellipse
+
+<img src="https://github.com/FlorisWu/satellite-around-Mars/blob/master/energy_2000.jpg?raw=true" width="900"/>
