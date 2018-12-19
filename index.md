@@ -1,8 +1,9 @@
 # Satellite trajectory around Mars
 
-During my freshman year studying a bachelor's degree at Imperial College London, I did a Python project plotting the motion, angular deviation and energies of a satellite travelling around Mars. The function called "odeint" from the package scipy is used the solve first order ordinary equations.
+During my freshman year studying a bachelor's degree in physics at Imperial College London, I did a Python project plotting the motion, angular deviation and energies of a satellite travelling around Mars.
 
 ## Loading packages and defining constants
+The function called "odeint" from the package scipy is used the solve first order ordinary equations.
 
 ```python
 import scipy as sp
