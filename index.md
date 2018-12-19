@@ -30,20 +30,26 @@ def f1(x, t):
     ax=-G*MM*xx/(xx**2+xy**2)**1.5 #acceleration in x direction
     ay=-G*MM*xy/(xx**2+xy**2)**1.5 #acceleration in y direction
     return [vx,ax,vy,ay]
+    
 t=sp.linspace(0.,1000000.,times) #time
+
 xx0=[-5*R, 0, -2*R, 500] #starting position and velocity
+
 MARS=sp.arange(0,360,0.01) #drawing Mars
 soln=spi.odeint(f1,xx0,t)
 dist=(soln[:,0]**2+soln[:,2]**2)**0.5
+
 for p in range(times):
     if dist[p] < R:
         print("Satellite crashes.")
         break
     else: pass
+
 xx=soln[:,0]
 vx=soln[:,1]
 xy=soln[:,2]
 vy=soln[:,3]
+
 fig=pl.figure(figsize=(20,10))
 pl.plot(xx,xy)
 pl.plot(R*sp.sin(MARS),R*sp.cos(MARS),'r')
