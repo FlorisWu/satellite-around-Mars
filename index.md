@@ -60,3 +60,5 @@ pl.ylabel("y(m)", fontsize=25)
 pl.xticks(fontsize=16)
 pl.yticks(fontsize=16)
 ```
+
+<img src="https://github.com/FlorisWu/satellite-around-Mars/blob/master/trajectory_500.jpg?raw=true" width="900"/>
